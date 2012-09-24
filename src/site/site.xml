@@ -35,10 +35,6 @@
    </bannerLeft>
    
    <body>
-      <head>
-         <link href="./css/forkit.css" rel="stylesheet" />
-      </head>
-
       <links>
          <item name="Demo application" href="http://datatables4j-examples.datatables4j.cloudbees.net/" />
          <item name="DataTables" href="http://datatables.net" />
