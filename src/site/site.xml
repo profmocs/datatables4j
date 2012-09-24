@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="DataTables4j" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+
+   <skin>
+      <groupId>org.apache.maven.skins</groupId>
+      <artifactId>maven-fluido-skin</artifactId>
+      <version>1.3.0</version>
+   </skin>
+
+   <custom>
+      <fluidoSkin>
+         <sideBarEnabled>true</sideBarEnabled>
+         <googleSearch>
+            <sitesearch />
+         </googleSearch>
+         <gitHub>
+            <projectId>datatables4j</projectId>
+            <ribbonOrientation>right</ribbonOrientation>
+            <ribbonColor>red</ribbonColor>
+         </gitHub>
+         <twitter>
+            <user>DataTables4j</user>
+            <showUser>true</showUser>
+            <showFollowers>true</showFollowers>
+         </twitter>
+      </fluidoSkin>
+   </custom>
+
+   <bannerLeft>
+      <name>DataTables4j</name>
+      <src>/images/logo_DataTables4j.png</src>
+      <href>http://datatables4j.github.com/datatables4j</href>
+   </bannerLeft>
+   
+   <body>
+      <head>
+         <link href="./css/forkit.css" rel="stylesheet" />
+      </head>
+
+      <links>
+         <item name="Demo application" href="http://localhost:8080/datatables4j-examples" />
+         <item name="DataTables" href="http://datatables.net" />
+      </links>
+
+      <menu name="DataTables4j">
+         <item name="Overview" href="index.html" />
+         <item name="How it works" href="main.howitworks.html" />
+         <item name="Download" href="main.download.html" />
+         <item name="Install" href="main.install.html" />
+         <item name="Changelog" href="main.changelog.html" />
+         <item name="Roadmap" href="main.roadmap.html" />
+      </menu>
+
+      <menu name="Examples">
+         <item name="Basic initialisation" href="basic.home.html"
+            collapse="true">
+            <item name="Default configuration" href="basic.default.html" />
+            <item name="Table informations" href="basic.informations.html" />
+            <item name="Table sorting" href="basic.sorting.html" />
+            <item name="Table filtering" href="basic.filtering.html" />
+            <item name="Table paging" href="basic.paging.html" />
+            <item name="Change length" href="basic.changelength.html" />
+            <item name="Auto width" href="basic.autowidth.html" />
+            <item name="Using implicit object" href="basic.implicit.html" />
+            <item name="Using CDN" href="basic.cdn.html" />
+         </item>
+         <item name="Advanced initialisation" href="advanced.home.html"
+            collapse="true">
+            <item name="Row id" href="advanced.rowid.html" />
+            <item name="Use extra file" href="advanced.extrafile.html" />
+            <item name="Use extra conf" href="advanced.extraconf.html" />
+            <item name="Override default configuration" href="advanced.override.html" />
+            <item name="Multiple tables" href="advanced.multiple.html" />
+            <item name="Nested tables" href="advanced.nested.html" />
+            <item name="Ninja tables" href="advanced.ninja.html" />
+         </item>
+         <item name="Datasources" href="datasource.home.html"
+            collapse="true">
+            <item name="DOM" href="datasources.dom.html" />
+            <item name="AJAX" href="datasources.ajax.html" />
+         </item>
+      </menu>
+
+      <menu name="Tags reference">
+         <item name="Table tag" href="tag.table.html" />
+         <item name="Column tag" href="tag.column.html" />
+         <item name="ExtraConf tag" href="tag.extraconf.html" />
+         <item name="ExtraFile tag" href="tag.extrafile.html" />
+         <item name="Prop tag" href="tag.prop.html" />
+      </menu>
+
+      <menu name="Features">
+         <item name="Default properties" href="features.defaultproperties.html" />
+         <item name="Export" href="features.export.html" />
+         <item name="Using compressor" href="features.compressor.home.html"
+            collapse="true">
+            <item name="Default configuration" href="features.compressor.default.html" />
+         </item>
+         <item name="Using aggregator" href="features.aggregator.home.html"
+            collapse="true">
+            <item name="Default configuration" href="features.aggregator.default.html" />
+         </item>
+      </menu>
+
+      <menu name="Plugins">
+         <item name="Available" href="" />
+         <item name="Writing your plugin" href="" />
+      </menu>
+   </body>
+</project>
