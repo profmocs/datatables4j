@@ -82,10 +82,12 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">DataTables4j</li>
                                 
-      <li class="active">
+      <li>
     
-            <a href="#"><i class="none"></i>Overview</a>
-          </li>
+                          <a href="index.html" title="Overview">
+          <i class="none"></i>
+        Overview</a>
+            </li>
                   
       <li>
     
@@ -145,12 +147,10 @@
                   </li>
                               <li class="nav-header">Tags reference</li>
                                 
-      <li>
+      <li class="active">
     
-                          <a href="tag.table.html" title="Table tag">
-          <i class="none"></i>
-        Table tag</a>
-            </li>
+            <a href="#"><i class="none"></i>Table tag</a>
+          </li>
                   
       <li>
     
@@ -258,15 +258,194 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            <div class="section"><div class="section"><h3>Overview<a name="Overview"></a></h3><p>DataTables4j is an open-source project that allows you to quickly create HTML table in your Java/JEE based web application without even writing any HTML or Javascript code !</p><p>DataTables4j will handle all the HTML and Javascript code generation needed by the amazing <a class="externalLink" href="htt://datatables.net" title="DataTables">DataTables</a> jQuery plugin, depending on how you configured the JSP tags.</p><p>It is highly inspired by the excellent <a class="externalLink" href="http://displaytag.sourceforge.net" title="DisplayTag">DisplayTag</a> framework. </p></div><div class="section"><h3>Usage<a name="Usage"></a></h3><p>Once DataTables4j installed (see the <a href="./main.install.html" title="Go to the installation guide">installation guide</a>) and considering <tt>persons</tt> as a <i>java.util.Collection</i> in the request scope, just add the following lines in your JSP :</p>
-<div class="source"><pre class="prettyprint">&lt;datatables:table id=&quot;myTableId&quot; data=&quot;${persons}&quot;&gt;
-    &lt;datatables:column title=&quot;Id&quot; property=&quot;id&quot; /&gt;
-    &lt;datatables:column title=&quot;FirstName&quot; property=&quot;firstName&quot; /&gt;
-    &lt;datatables:column title=&quot;LastName&quot; property=&quot;lastName&quot; /&gt;
-    &lt;datatables:column title=&quot;Street&quot; property=&quot;address.street1&quot; /&gt;
-    &lt;datatables:column title=&quot;Mail&quot; property=&quot;mail&quot; /&gt;
+            <h1>Table tag</h1><div class="section"><h2>Usage<a name="Usage"></a></h2>
+<div class="source"><pre class="prettyprint">&lt;datatables:table&gt;
+   ...
 &lt;/datatables:table&gt;
-</pre></div><p>That's all ! DataTables4j will generate HTML code (the HTML <tt>&lt;table&gt;</tt> tag) and all the Javascript code required by <a class="externalLink" href="http://datatables.net" title="DataTables">DataTables</a> to build and prettify your table. </p><p><a href="./main.howitworks.html" title="Go to How It Works">See more details here.</a></p></div><div class="section"><h3>Any bug ? Any idea for enhancement ?<a name="Any_bug__Any_idea_for_enhancement_"></a></h3><p>Please use the <a class="externalLink" href="https://github.com/datatables4j/datatables4j-core/issues" title="Go to GitHub issue page">GitHub issue page</a>.</p></div><div class="section"><h3>Help<a name="Help"></a></h3><p>Please use the <a class="externalLink" href="http://datatables.net/forums/discussion/1013" title="Go to DataTables forum">DataTables forum</a>.</p></div><div class="section"><h3>License<a name="License"></a></h3><p><b>DataTables4j</b> is licensed under the <a class="externalLink" href="http://www.gnu.org/licenses/gpl-2.0.html" title="GPLv2">GPLv2</a> licence and use <a class="externalLink" href="http://datatables.net" title="DataTables">DataTables</a> under the <a class="externalLink" href="http://datatables.net/license_bsd" title="BSD">BSD</a> one.</p></div></div>
+</pre></div><p>Warning : the table tag must have a body.</p></div><div class="section"><h2>Reference<a name="Reference"></a></h2>
+<table border="0" id="myTable" class="table table-striped table-bordered">
+  <thead>
+    <tr class="a">
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Value(s)</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr class="b">
+    <td colspan="5" style="text-align: center; background-color: #CDCDCD;">DataTables</td>
+  </tr>
+  <tr class="a">
+    <td>id</td>
+    <td><b>(required)</b> DOM id of the HTML table</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="b">
+    <td>data</td>
+    <td><b>(Either data or url attribute is required)</b> Collection of data used to populate the table</td>
+    <td>java.lang.Object</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="a">
+    <td>url</td>
+    <td><b>(Either data or url attribute is required)</b> Web service URL used to populate the table</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="b">
+    <td>row</td>
+    <td>Name of the object representing the current row. If data must be displayed without any decoration, use <i>property</i> attribute on column tag</td>
+    <td>java.lang.String</td>
+    <td>none</td>
+    <td>none</td>
+  </tr>
+  <tr class="a">
+    <td>cdn</td>
+    <td>Enable the DataTables source files to be loaded from the Microsoft CDN (Content Delivery Framework) preventing you from hosting the files yourself.</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>false</td>
+  </tr>
+  <tr class="b">
+    <td>cssStyle</td>
+    <td>CSS style applied on the HTML table (HTML style attribute)</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="a">
+    <td>cssClass</td>
+    <td>CSS class(es) applied on the HTML table (HTML class attribute)</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="b">
+    <td>rowIdBase</td>
+    <td>Useful if you want each row has a DOM id. This attribute is evaluated as a property of the current iterated bean (Only if DOM datasource)</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="a">
+    <td>rowIdPrefix</td>
+    <td>String which is prepended to the rowIdBase attribute, in order to build row id (HTML id attribute)</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="b">
+    <td>rowIdSufix</td>
+    <td>String which is appended to the rowIdBase attribute, in order to build row id (HTML id attribute)</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="a">
+    <td colspan="5" style="text-align: center; background-color: #CDCDCD;">Basic features</td>
+  </tr>
+  <tr class="b">
+    <td>info</td>
+    <td>Enable or disable the table information display. This shows information about the data that is currently visible on the page, including information about filtered data if that action is being performed</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>true</td>
+  </tr>
+  <tr class="a">
+    <td>paginate</td>
+    <td>Enable or disable pagination</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>true</td>
+  </tr>
+  <tr class="b">
+    <td>lengthPaginate</td>
+    <td>If paginate is enabled, allows the end user to select the size of a formatted page from a select menu (sizes are 10, 25, 50 and 100)</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>true</td>
+  </tr>
+  <tr class="a">
+    <td>paginationType</td>
+    <td>Choice between the two different built-in pagination interaction methods ('two_button' or 'full_numbers') which present different page controls to the end user</td>
+    <td>java.lang.String</td>
+    <td>two_button|full_numbers</td>
+    <td>two_button</td>
+  </tr>
+  <tr class="b">
+    <td>filter</td>
+    <td>TODO</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>true</td>
+  </tr>
+  <tr class="a">
+    <td>sort</td>
+    <td>Enable or disable sorting of columns. Sorting of individual columns can be disabled by the &quot;sortable&quot; attribute of column tag</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>true</td>
+  </tr>
+  <tr class="b">
+    <td>autoWidth</td>
+    <td>Enable or disable automatic column width calculation</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>true</td>
+  </tr>
+  <tr class="a">
+    <td>processing</td>
+    <td>Enable or disable the display of a 'processing' indicator when the table is being processed (e.g. a sort). This is particularly useful for tables with large amounts of data where it can take a noticeable amount of time to sort the entries</td>
+    <td>java.lang.String</td>
+    <td>true|false</td>
+    <td>false</td>
+  </tr>
+  <tr class="b">
+    <td colspan="5" style="text-align: center; background-color: #CDCDCD;">Plugin</td>
+  </tr>
+  <tr class="a">
+    <td>fixedHeader</td>
+    <td>Enable or disable the DataTables FixedHeader plugin</td>
+    <td>java.lang.Boolean</td>
+    <td>true|false</td>
+    <td>false</td>
+  </tr>
+  <tr class="b">
+    <td>fixedPosition</td>
+    <td>Respectively fix the header, footer, left column, right column</td>
+    <td>java.lang.String</td>
+    <td>(top|bottom|left|right</td>
+    <td>top</td>
+  </tr>
+  <tr class="a">
+    <td>scroller</td>
+    <td>Enable or disable the DataTables Scroller plugin</td>
+    <td>java.lang.Boolean</td>
+    <td>true|false</td>
+    <td>false</td>
+  </tr>
+  <tr class="b">
+    <td>scrollY</td>
+    <td>TODO</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td>200px</td>
+  </tr>
+  <tr class="a">
+    <td>colReorder</td>
+    <td>Enable or disable the DataTables ColReorder plugin</td>
+    <td>java.lang.Boolean</td>
+    <td>true|false</td>
+    <td>false</td>
+  </tr>
+  </tbody>
+</table></div>
                   </div>
             </div>
           </div>
