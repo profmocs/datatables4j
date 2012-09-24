@@ -15,11 +15,11 @@
          <googleSearch>
             <sitesearch />
          </googleSearch>
-         <gitHub>
+         <!-- gitHub>
             <projectId>datatables4j</projectId>
             <ribbonOrientation>right</ribbonOrientation>
             <ribbonColor>red</ribbonColor>
-         </gitHub>
+         </gitHub> -->
          <twitter>
             <user>DataTables4j</user>
             <showUser>true</showUser>
@@ -40,7 +40,7 @@
       </head>
 
       <links>
-         <item name="Demo application" href="http://localhost:8080/datatables4j-examples" />
+         <item name="Demo application" href="http://datatables4j-examples.datatables4j.cloudbees.net/" />
          <item name="DataTables" href="http://datatables.net" />
       </links>
 
