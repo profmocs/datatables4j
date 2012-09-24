@@ -11,7 +11,7 @@
 
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <demoAppUrl>http://localhost:8080/datatables4j-examples</demoAppUrl>
+      <demoAppUrl>http://datatables4j-examples.datatables4j.cloudbees.net/</demoAppUrl>
    </properties>
 
    <issueManagement>
