@@ -1,10 +1,10 @@
 ### Overview ###
 
- DataTables4j is an open-source project that allows you to quickly create HTML table in your Java/JEE based web application without even writing any HTML or Javascript code !
+ **DataTables4j** is an open-source project that allows you to quickly create HTML table in your Java/JEE based web application without even writing any HTML or Javascript code !
 
- DataTables4j will handle all the HTML and Javascript code generation needed by the amazing [DataTables](htt://datatables.net "DataTables") jQuery plugin, depending on how you configured the JSP tags.
+ **DataTables4j** will handle all the HTML and Javascript code generation needed by the amazing [DataTables](http://datatables.net "DataTables") jQuery plugin, depending on how you configured the JSP tags.
 
- It is highly inspired by the excellent [DisplayTag](http://displaytag.sourceforge.net "DisplayTag") framework. 
+<u>N.B.:</u> This library is highly inspired by the excellent [DisplayTag](http://displaytag.sourceforge.net "DisplayTag") framework. 
 
 ### Usage ###
 
@@ -19,9 +19,9 @@ Once DataTables4j installed (see the [installation guide](./main.install.html "G
     </datatables:table>
 
 
-That\'s all ! DataTables4j will generate HTML code (the HTML <tt>&lt;table&gt;</tt> tag) and all the Javascript code required by [DataTables](http://datatables.net "DataTables") to build and prettify your table. 
+That\'s all ! **DataTables4j** will generate HTML code (the HTML <tt>&lt;table&gt;</tt> tag) and all the Javascript code required by [DataTables](http://datatables.net "DataTables") to build and prettify your table. 
 
-[See more details here.](./main.howitworks.html "Go to How It Works")
+[See more details here](./main.howitworks.html "Go to How It Works") if you wonder how it works.
 
 ### Any bug ? Any idea for enhancement ? ###
 Please use the [GitHub issue page](https://github.com/datatables4j/datatables4j-core/issues "Go to GitHub issue page").
