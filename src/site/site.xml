@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="DataTables4j" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+<project xmlns="http://maven.apache.org/DECORATION/1.3.0"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd"
+   name="DataTables4j">
 
    <skin>
       <groupId>org.apache.maven.skins</groupId>
@@ -9,17 +10,19 @@
       <version>1.3.0</version>
    </skin>
 
+   <googleAnalyticsAccountId>UA-33818546-2</googleAnalyticsAccountId>
+
    <custom>
       <fluidoSkin>
          <sideBarEnabled>true</sideBarEnabled>
          <googleSearch>
             <sitesearch />
          </googleSearch>
-         <!-- gitHub>
+         <gitHub>
             <projectId>datatables4j</projectId>
             <ribbonOrientation>right</ribbonOrientation>
-            <ribbonColor>red</ribbonColor>
-         </gitHub> -->
+            <ribbonColor>darkblue</ribbonColor>
+         </gitHub>
          <twitter>
             <user>DataTables4j</user>
             <showUser>true</showUser>
@@ -30,19 +33,19 @@
 
    <bannerLeft>
       <name>DataTables4j</name>
-      <src>/images/logo_DataTables4j.png</src>
+      <src>/images/logo_DataTables4j_2.png</src>
       <href>http://datatables4j.github.com/datatables4j</href>
    </bannerLeft>
    
    <body>
       <links>
-         <item name="Demo application" href="http://datatables4j-examples.datatables4j.cloudbees.net/" />
-         <item name="DataTables" href="http://datatables.net" />
+         <item name="Demo application" target="_blank"
+            href="http://datatables4j-examples.datatables4j.cloudbees.net/" />
+         <item name="DataTables" target="_blank" href="http://datatables.net" />
       </links>
 
       <menu name="DataTables4j">
          <item name="Overview" href="index.html" />
-         <item name="How it works" href="main.howitworks.html" />
          <item name="Download" href="main.download.html" />
          <item name="Install" href="main.install.html" />
          <item name="Changelog" href="main.changelog.html" />
@@ -53,7 +56,7 @@
          <item name="Basic initialisation" href="basic.home.html"
             collapse="true">
             <item name="Default configuration" href="basic.default.html" />
-            <item name="Table informations" href="basic.informations.html" />
+            <item name="Table informations" href="basic.info.html" />
             <item name="Table sorting" href="basic.sorting.html" />
             <item name="Table filtering" href="basic.filtering.html" />
             <item name="Table paging" href="basic.paging.html" />
@@ -74,8 +77,8 @@
          </item>
          <item name="Datasources" href="datasource.home.html"
             collapse="true">
-            <item name="DOM" href="datasources.dom.html" />
-            <item name="AJAX" href="datasources.ajax.html" />
+            <item name="DOM" href="datasource.dom.html" />
+            <item name="AJAX" href="datasource.ajax.html" />
          </item>
       </menu>
 
@@ -103,6 +106,12 @@
       <menu name="Plugins">
          <item name="Available" href="" />
          <item name="Writing your plugin" href="" />
+      </menu>
+      
+      <menu name="Development">
+         <item name="Source repository" href="dev.source.html" />
+         <item name="Continous Integration" href="dev.ci.html" />
+         <item name="Issue tracking" href="dev.issue.html" />
       </menu>
    </body>
 </project>

@@ -1,6 +1,6 @@
 <h3>Installation guide</h3>
 
-<h4>Step 1 : install the DataTables4j JARs</h4>
+<h4>Step 1 : Install the DataTables4j JARs</h4>
 
 <h5>Manually</h5>
 
@@ -21,7 +21,7 @@ You just need to add the following dependency under the <tt>dependencies</tt> se
         <version>${project.version}</version>
     </dependency>
 
-<h4>Step 2 : get jQuery and DataTables</h4>
+<h4>Step 2 : Include jQuery and DataTables</h4>
 
 By default, the Javascript libraries are not embedded in <strong>DataTables4j</strong>. So you must ensure you declared somewhere in your JSP the <tt>script</tt> and <tt>link</tt> tags needed.
 
@@ -32,17 +32,15 @@ By default, the Javascript libraries are not embedded in <strong>DataTables4j</s
 	<!-- jQuery -->
 	<script src="pathToJs/jquery-1.7.2.min.js"></script>
 
-<h4>Step 3 : define the taglib</h4>
+<h4>Step 3 : Include the taglib</h4>
 
-Everywhere you need to display a HTML table using <strong>DataTables4j</strong>, you need to declare the taglib :
+Everywhere you need to display a HTML table using <strong>DataTables4j</strong>, you need to declare the taglib in your JSP :
 
-	<%@ taglib prefix="datatables" uri="http://github.com/tduchateau/DataTables4j" %>
+	<%@ taglib prefix="datatables" uri="http://github.com/datatables4j" %>
 
-<h4>Step 4 (optional) : add the DataTables4j servlet definition and mapping</h4>
+<h4>Step 4 : Add the DataTables4j servlet</h4>
 
-Depending on what version of the Java EE web stack (Servlet/JSP) you are using, this step may be optional.
-
-For 2.5 and below, you will need to add the servlet definition and mapping to your application's <tt>web.xml</tt> :
+You will need to add the servlet definition and mapping to your application's <tt>web.xml</tt> :
 
     <servlet>
         <display-name>DataTables4j Servlet</display-name>
@@ -55,9 +53,7 @@ For 2.5 and below, you will need to add the servlet definition and mapping to yo
         <url-pattern>/datatablesController/*</url-pattern>
     </servlet-mapping>
 
-Since 3.0, you won't need it because the servlet is defined dynamically.
-
-<h4>Step 5 (optional) : add a DataTables4j custom configuration file</h4>
+<h4>Step 5 (optional) : Add a DataTables4j custom configuration file</h4>
 
 DataTables4j internally uses its configuration file but you can override it creating a file called <strong>datatables4j.properties</strong> available at the root of your classpath.
 

@@ -1,10 +1,10 @@
-# Column tag #
+<h3>Column tag</h3>
 
-## Usage ##
+<h4>Usage</h4>
 
     <datatables:column>
 
-## Reference ##
+<h4>Reference</h4>
 
 <table id="myTable" class="table table-striped table-bordered">
   <thead>

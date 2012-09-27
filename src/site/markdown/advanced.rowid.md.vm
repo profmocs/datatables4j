@@ -2,7 +2,7 @@
 
 <h4>Row id</h4>
 
-Sometimes, it can be useful to add each row an HTML id. Sometimes too, the row id cannot just be an incremented id but a dynamic string builded, for instance, from a bean's attribute.
+Sometimes, it can be useful to add each row an HTML id. Sometimes too, the row id cannot just be an incremented id but a dynamic builded string, for instance, from a bean's attribute.
 
 You have at one's disposal 3 attributes : <tt>rowIdBase</tt>, <tt>rowIdPrefix</tt> and <tt>rowIdSuffix</tt>.
 

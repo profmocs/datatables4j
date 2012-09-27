@@ -1,10 +1,10 @@
-### Prop tag ###
+<h3>Prop tag</h3>
 
-#### Description ####
+<h4>Description</h4>
 
 Allow to override a property normally defined in the DataTables4j properties file.
 
-#### Usage ####
+<h4>Usage</h4>
 
     
     <datatables:table>
@@ -14,7 +14,7 @@ Allow to override a property normally defined in the DataTables4j properties fil
     </datatables:table>
     
 
-#### Reference ####
+<h4>Reference</h4>
 
 <table id="myTable" class="table table-striped table-bordered">
   <thead>

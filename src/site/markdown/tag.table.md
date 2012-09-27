@@ -1,6 +1,6 @@
-# Table tag #
+<h3>Table tag</h3>
 
-## Usage ## 
+<h4>Usage</h4>
 
     <datatables:table>
        ...
@@ -8,7 +8,7 @@
 
 Warning : the table tag must have a body.
 
-## Reference ##
+<h4>Reference</h4>
 
 <table id="myTable" class="table table-striped table-bordered">
   <thead>
