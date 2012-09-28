@@ -6,7 +6,7 @@
        ...
     </datatables:table>
 
-Warning : the table tag must have a body.
+<p class="alert-info"><strong>Warning !</strong> the table tag must have a body.</p>
 
 <h4>Reference</h4>
 
@@ -21,9 +21,6 @@ Warning : the table tag must have a body.
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <td colspan="5" style="text-align: center; background-color: #CDCDCD;">DataTables</td>
-  </tr>
   <tr>
     <td>id</td>
     <td><strong>(required)</strong> DOM id of the HTML table</td>
@@ -49,8 +46,8 @@ Warning : the table tag must have a body.
     <td>row</td>
     <td>Name of the object representing the current row. If data must be displayed without any decoration, use <em>property</em> attribute on column tag</td>
     <td>java.lang.String</td>
-    <td>none</td>
-    <td>none</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>cdn</td>
@@ -93,9 +90,6 @@ Warning : the table tag must have a body.
     <td>java.lang.String</td>
     <td></td>
     <td></td>
-  </tr>
-  <tr>
-    <td colspan="5" style="text-align: center; background-color: #CDCDCD;">Basic features</td>
   </tr>
   <tr>
     <td>info</td>
@@ -154,9 +148,6 @@ Warning : the table tag must have a body.
     <td>false</td>
   </tr>
   <tr>
-    <td colspan="5" style="text-align: center; background-color: #CDCDCD;">Plugin</td>
-  </tr>
-  <tr>
     <td>fixedHeader</td>
     <td>Enable or disable the DataTables FixedHeader plugin</td>
     <td>java.lang.Boolean</td>
@@ -165,10 +156,17 @@ Warning : the table tag must have a body.
   </tr>
   <tr>
     <td>fixedPosition</td>
-    <td>Respectively fix the header, footer, left column, right column</td>
+    <td>(fixedHeader) Respectively fix the header, footer, left column, right column</td>
     <td>java.lang.String</td>
-    <td>(top|bottom|left|right</td>
+    <td>top|bottom|left|right</td>
     <td>top</td>
+  </tr>
+  <tr>
+    <td>offsetTop</td>
+    <td>(fixedHeader) Offset applied on the top.</td>
+    <td>java.lang.String</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>scroller</td>
@@ -179,10 +177,10 @@ Warning : the table tag must have a body.
   </tr>
   <tr>
     <td>scrollY</td>
-    <td>TODO</td>
+    <td>(scroller) Table's height to display in scrolling mode.</td>
     <td>java.lang.String</td>
     <td></td>
-    <td>200px</td>
+    <td>300px</td>
   </tr>
   <tr>
     <td>colReorder</td>
@@ -193,3 +191,9 @@ Warning : the table tag must have a body.
   </tr>
   </tbody>
 </table>
+
+<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
+<link rel="stylesheet" href="./css/tabletag.css" />
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js" ></script>
+<script src="./js/datatables.fixedheader.min.js" ></script>
+<script src="./js/tabletag.js" ></script>

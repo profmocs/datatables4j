@@ -1,19 +1,32 @@
 <h3>Installation guide</h3>
+<hr />
 
 <h4>Step 1 : Install the DataTables4j JARs</h4>
 
 <h5>Manually</h5>
 
-The following libraries must be available via the classpath of your application server
-
-<ul>
-	<li>datatables4j-core.jar</li>
-	<li>other-jar.jar</li>
-</ul>
+To come ...
 
 <h5>Using Maven</h5>
 
-You just need to add the following dependency under the <tt>dependencies</tt> section in your <tt>pom.xml</tt> :
+You need to add the following repositories in your <tt>pom.xml</tt> :
+
+    <repositories>
+        <repository>
+            <id>datatables4j-snapshot-repo</id>
+            <name>DataTables4j Snapshot Repository</name>
+            <url>http://repository-datatables4j.forge.cloudbees.com/snapshot/</url>
+        </repository>
+        <repository>
+            <id>datatables4j-release-repo</id>
+            <name>DataTables4j Release Repository</name>
+            <url>http://repository-datatables4j.forge.cloudbees.com/release/</url>
+        </repository>
+    </repositories>
+
+Note : repositories declaration won't be necessary for the 1.0.0 release.
+ 
+Then, just add the following dependency under the <tt>dependencies</tt> section of your <tt>pom.xml</tt> :
 
     <dependency>
         <groupId>org.datatables4j</groupId>
@@ -23,7 +36,7 @@ You just need to add the following dependency under the <tt>dependencies</tt> se
 
 <h4>Step 2 : Include jQuery and DataTables</h4>
 
-By default, the Javascript libraries are not embedded in <strong>DataTables4j</strong>. So you must ensure you declared somewhere in your JSP the <tt>script</tt> and <tt>link</tt> tags needed.
+By default, the Javascript libraries are not embedded in <strong>DataTables4j</strong>. So you must ensure you declared somewhere in your JSP those <tt>script</tt> and <tt>link</tt> tags.
 
     <!-- DataTables -->
     <link href="pathToCss/jquery.dataTables.css" rel="stylesheet">
