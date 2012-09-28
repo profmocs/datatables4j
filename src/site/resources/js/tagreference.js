@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var oTable = $('#myTable').dataTable({
+	var oTable = $('#tagReference').dataTable({
 		"bInfo" : false,
 		"bPaginate" : false,
 		"bLengthChange" : false,

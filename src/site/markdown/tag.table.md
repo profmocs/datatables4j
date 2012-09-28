@@ -1,5 +1,9 @@
 <h3>Table tag</h3>
 
+<h4>Description</h4>
+
+Generate a HTML table thanks to the awesome DataTables jQuery plugin.
+
 <h4>Usage</h4>
 
     <datatables:table>
@@ -10,7 +14,7 @@
 
 <h4>Reference</h4>
 
-<table id="myTable" class="table table-striped table-bordered">
+<table id="tagReference" class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -194,6 +198,6 @@
 
 <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
 <link rel="stylesheet" href="./css/tabletag.css" />
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js" ></script>
-<script src="./js/datatables.fixedheader.min.js" ></script>
-<script src="./js/tabletag.js" ></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script src="./js/datatables.fixedheader.min.js"></script>
+<script src="./js/tagreference.js"></script>

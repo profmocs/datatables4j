@@ -1,12 +1,24 @@
 <h3>Column tag</h3>
 
+<h4>Description</h4>
+
+Describe a column of the HTML table.
+
 <h4>Usage</h4>
 
-    <datatables:column>
+You can either let the <code>property</code> attribute handle the content of a cell. As a result, the <code>column</code> tag doesn't need a body. 
+
+    <datatables:column title="..." property="..." />
+    
+Or you set a body and put anything inside. See the <code>row</code> table attribute which may be useful in that case.
+
+    <datatables:column title="...">
+        <%-- Some HTML code or EL expression --%>
+    </datatables>
 
 <h4>Reference</h4>
 
-<table id="myTable" class="table table-striped table-bordered">
+<table id="tagReference" class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -19,59 +31,65 @@
   <tbody>
   <tr>
     <td>title</td>
-    <td>(required) DOM id of the HTML table</td>
+    <td>Column title</td>
     <td>java.lang.String</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>property</td>
-    <td>(Either data or url attribute is required) Collection of data used to populate the table</td>
-    <td>java.lang.Object</td>
+    <td>Name of the attribute of the current object being iterated object on, regardless the data source (DOM or AJAX)</td>
+    <td>java.lang.String</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>sortable</td>
-    <td>(Either data or url attribute is required) Web service URL used to populate the table</td>
-    <td>java.lang.String</td>
-    <td></td>
-    <td></td>
+    <td>Enable or disable sorting on column</td>
+    <td>java.lang.Boolean</td>
+    <td>true|false</td>
+    <td>true</td>
   </tr>
   <tr>
     <td>filterable</td>
-    <td>Name of the object representing the current row. If data must be displayed without any decoration, use <em>property</em> attribute on column tag</td>
-    <td>java.lang.String</td>
-    <td>none</td>
-    <td>none</td>
+    <td>Enable or disable filtering on column</td>
+    <td>java.lang.Boolean</td>
+    <td>true|false</td>
+    <td>true</td>
   </tr>
   <tr>
     <td>cssStyle</td>
-    <td>Enable the DataTables source files to be loaded from the Microsoft CDN (Content Delivery Framework) preventing you from hosting the files yourself.</td>
+    <td>CSS style applied on header cell (<code>th</code> tag)</td>
     <td>java.lang.String</td>
-    <td>true|false</td>
-    <td>false</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>cssCellStyle</td>
-    <td>CSS style applied on the HTML table (HTML style attribute)</td>
+    <td>CSS style applied on every table cell (<code>td</code> tag)</td>
     <td>java.lang.String</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>cssClass</td>
-    <td>CSS class(es) applied on the HTML table (HTML class attribute)</td>
+    <td>CSS class applied on header cell (<code>th</code> tag)</td>
     <td>java.lang.String</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>cssCellClass</td>
-    <td>Useful if you want each row has a DOM id. This attribute is evaluated as a property of the current iterated bean (Only if DOM datasource)</td>
+    <td>CSS class applied on every table cell (<code>td</code> tag)</td>
     <td>java.lang.String</td>
     <td></td>
     <td></td>
   </tr>
   </tbody>
 </table>
+
+<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
+<link rel="stylesheet" href="./css/tabletag.css" />
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js" ></script>
+<script src="./js/datatables.fixedheader.min.js" ></script>
+<script src="./js/tagreference.js" ></script>
