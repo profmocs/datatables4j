@@ -1,9 +1,29 @@
-### Basic initialisation ###
+<h3>Basic initialisation</h3>
 
-#### Using CDN ####
+<h4>Using CDN</h4>
 
-CDN allows you to avoid hosting yourself DataTables files on your server. The Microsoft CDN s'en charge.
+To use CDN, just set the <code>cdn</code> table attribute to <tt>true</tt>.
 
-To use CDN, just set the cdn table attribute to true.
+<hr />
+<h5>Example</h5>
 
-All needed file (*.js, *.css, *.png) will so be downloaded from http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/jquery.dataTables.js.
+    <datatables:table id="myTableId" data="${persons}" cdn="true">
+        <datatables:column title="Id" property="id" />
+        <datatables:column title="FirstName" property="firstName" />
+        <datatables:column title="LastName" property="lastName" />
+        <datatables:column title="Street" property="address.street1" />
+        <datatables:column title="Mail" property="mail" />
+     </datatables:table>
+
+As a result, <strong>DataTables4j</strong> will produce the following HTML code :
+
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/css/jquery.dataTables.css">
+    <table id="myTableId>
+        ...
+    </table>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/jquery.dataTables.min.js"></script>
+    <script src="http://your.domain/your.context.path/datatablesController/datatables4j-XXXXX.js"></script>
+
+<hr />
+<h5>Demo</h5>
+<a href="${demoAppUrl}basic/cdn" class="btn btn-success" target="_BLANK">See the demo</a>
