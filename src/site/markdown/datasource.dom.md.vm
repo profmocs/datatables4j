@@ -1,0 +1,22 @@
+<h3>Data sources</h3>
+
+<h4>DOM data source</h4>
+
+This is the most usual way to display a table.
+
+All you need is a <tt>java.util.Collection</tt> available in the request scope. Then, put that collection in the <code>data</code> attribute of the table tag.
+
+<hr />
+<h5>Example</h5>
+
+    <datatables:table id="myTableId" data="${persons}">
+        <datatables:column title="Id" property="id"/>
+        <datatables:column title="FirstName" property="firstName" />
+        <datatables:column title="LastName" property="lastName" />
+        <datatables:column title="Street" property="address.street1" />
+        <datatables:column title="Mail" property="mail" />
+    </datatables:table>
+
+<hr />
+<h5>Demo</h5>
+<a href="${demoAppUrl}/datasource/dom" class="btn btn-success" target="_BLANK">See the demo</a>

@@ -50,9 +50,15 @@
          <item name="Install" href="main.install.html" />
          <item name="Changelog" href="main.changelog.html" />
          <item name="Roadmap" href="main.roadmap.html" />
+         <item name="Acknowledgments" href="main.acknowledgments.html" />
       </menu>
 
       <menu name="Examples">
+         <item name="Data sources" href="datasource.home.html"
+            collapse="true">
+            <item name="DOM" href="datasource.dom.html" />
+            <item name="AJAX" href="datasource.ajax.html" />
+         </item>
          <item name="Basic initialisation" href="basic.home.html"
             collapse="true">
             <item name="Default configuration" href="basic.default.html" />
@@ -60,9 +66,10 @@
             <item name="Table sorting" href="basic.sorting.html" />
             <item name="Table filtering" href="basic.filtering.html" />
             <item name="Table paging" href="basic.paging.html" />
-            <item name="Change length" href="basic.changelength.html" />
-            <item name="Auto width" href="basic.autowidth.html" />
+            <item name="Table length changing" href="basic.lengthchanging.html" />
+            <item name="Table width" href="basic.autowidth.html" />
             <item name="Using implicit object" href="basic.implicit.html" />
+            <item name="Using properties file" href="basic.properties.html" />
             <item name="Using CDN" href="basic.cdn.html" />
          </item>
          <item name="Advanced initialisation" href="advanced.home.html"
@@ -72,27 +79,22 @@
             <item name="Use extra conf" href="advanced.extraconf.html" />
             <item name="Override default configuration" href="advanced.override.html" />
             <item name="Multiple tables" href="advanced.multiple.html" />
-            <item name="Nested tables" href="advanced.nested.html" />
             <item name="Ninja tables" href="advanced.ninja.html" />
-         </item>
-         <item name="Datasources" href="datasource.home.html"
-            collapse="true">
-            <item name="DOM" href="datasource.dom.html" />
-            <item name="AJAX" href="datasource.ajax.html" />
          </item>
       </menu>
 
-      <menu name="Tags reference">
-         <item name="Table tag" href="tag.table.html" />
-         <item name="Column tag" href="tag.column.html" />
-         <item name="ExtraConf tag" href="tag.extraconf.html" />
-         <item name="ExtraFile tag" href="tag.extrafile.html" />
-         <item name="Prop tag" href="tag.prop.html" />
+      <menu name="Reference">
+         <item name="Configuration properties" href="ref.properties.html" />
+         <item name="Table tag" href="ref.tagtable.html" />
+         <item name="Column tag" href="ref.tagcolumn.html" />
+         <item name="ExtraConf tag" href="ref.tagextraconf.html" />
+         <item name="ExtraFile tag" href="ref.tagextrafile.html" />
+         <item name="Prop tag" href="ref.tagprop.html" />
       </menu>
 
       <menu name="Features">
          <item name="Default properties" href="features.defaultproperties.html" />
-         <item name="Export" href="features.export.html" />
+         <!-- <item name="Export" href="features.export.html" /> -->
          <item name="Using compressor" href="features.compressor.home.html"
             collapse="true">
             <item name="Default configuration" href="features.compressor.default.html" />
@@ -104,8 +106,12 @@
       </menu>
 
       <menu name="Plugins">
-         <item name="Available" href="" />
-         <item name="Writing your plugin" href="" />
+         <item name="Available" href="plugins.home.html" collapse="true">
+            <item name="FixedHeader" href="plugins.fixedheader.html" />
+            <item name="Scroller" href="plugins.scroller.html" />
+            <item name="ColReorder" href="plugins.colreorder.html" />
+         </item>
+         <!-- <item name="Writing your plugin" href="" /> -->
       </menu>
       
       <menu name="Development">

@@ -110,7 +110,7 @@ Generate a HTML table thanks to the awesome DataTables jQuery plugin.
     <td>true</td>
   </tr>
   <tr>
-    <td>lengthPaginate</td>
+    <td>lengthChange</td>
     <td>If paginate is enabled, allows the end user to select the size of a formatted page from a select menu (sizes are 10, 25, 50 and 100)</td>
     <td>java.lang.String</td>
     <td>true|false</td>
@@ -125,8 +125,8 @@ Generate a HTML table thanks to the awesome DataTables jQuery plugin.
   </tr>
   <tr>
     <td>filter</td>
-    <td>TODO</td>
-    <td>java.lang.String</td>
+    <td>Enable or disable filtering of data</td>
+    <td>java.lang.Boolean</td>
     <td>true|false</td>
     <td>true</td>
   </tr>

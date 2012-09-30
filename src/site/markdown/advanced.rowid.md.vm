@@ -12,46 +12,48 @@ You have at one's disposal 3 attributes : <tt>rowIdBase</tt>, <tt>rowIdPrefix</t
 <li><tt>rowIdSufix</tt> : String appended to the <tt>rowIdBase</tt> attribute</li>
 </ul>
 
-<a href="${demoAppUrl}/advanced/rowid" class="btn btn-success">See the demo</a>
-
 <hr/>
 <h5>Example</h5>
 
-Considering the following <abbr title="Plain Old Java Object">POJO</abbr> :
+    <datatables:table id="myTableId" data="${persons}" rowIdBase="id" rowIdPrefix="person_">
+        <datatables:column title="Id" property="id" />
+        <datatables:column title="FirstName" property="firstName" />
+        <datatables:column title="LastName" property="lastName" />
+        <datatables:column title="Street" property="address.street1" />
+        <datatables:column title="Mail" property="mail" />
+     </datatables:table>
+      
+As a result, <strong>DataTables4j</strong> will produce the following HTML code :
 
-<strong>Person.java</strong>
-
-    public class Person {
-		private Long id;
-		private String firstName;
-		private String lastName;
-		private Address address;
-		...
-	}
-
-<strong>Address.java</strong>
- 
-	public class Address {
-		private String street1;
-		private String street2;
-		private Town town;
-		...
-	}
- 
-<strong>Town.java</strong>
- 
-	public class Town {
-		private String label;
-		private String postcode;
-		...
-	}
-	
-We would like to build row ids as "person_1", "person_2", ...
-
-	<datatables:table id="myTableId" data="${persons}" rowIdBase="id" rowIdPrefix="person_">
-		<datatables:column title="Id" property="id" />
-		<datatables:column title="FirstName" property="firstName" />
-		<datatables:column title="LastName" property="lastName" />
-		<datatables:column title="Street" property="address.street1" />
-		<datatables:column title="Mail" property="mail" />
-	</datatables:table>
+    <table id="myTableId">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Street</th>
+                <th>Mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="person_1">
+                <td>1</td>
+                <td>Selma</td>
+                <td>Maldonado</td>
+                <td>Ap #351-1812 Eu, Ave</td>
+                <td>venenatis@Duisvolutpat.com</td>
+            </tr>
+            <tr id="person_2">
+                <td>2</td>
+                <td>Vanna</td>
+                <td>Salas</td>
+                <td>947-3605 Feugiat. St.</td>
+                <td>bibendum.fermentum.metus@ante.ca</td>
+            </tr>
+            ...
+        </tbody>
+    </table>
+      
+<hr />
+<h5></h5>
+<a href="${demoAppUrl}/advanced/rowid" class="btn btn-success" target="_BLANK">See the demo</a>

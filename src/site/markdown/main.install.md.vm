@@ -1,6 +1,9 @@
 <h3>Installation guide</h3>
 <hr />
 
+<h4>Prerequisites</h4>
+Java 1.5 
+
 <h4>Step 1 : Install the DataTables4j JARs</h4>
 
 <h5>Manually</h5>

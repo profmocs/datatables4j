@@ -1,0 +1,39 @@
+<h3>Basic initialisation</h3>
+
+<h4>Table paging</h4>
+
+By default, pagination is enabled but you can disable it using the <code>paginate</code> table attribute.
+
+You can also change the default pagination type <strong>two_buttons</strong> by setting the <code>paginationType</code> table attribute to <strong>full_numbers</strong>.
+
+<hr />
+<h5>Example</h5>
+
+    <datatables:table id="myTableId" data="${persons}" paginationType="full_numbers">
+        <datatables:column title="Id" property="id" />
+        <datatables:column title="FirstName" property="firstName" />
+        <datatables:column title="LastName" property="lastName" />
+        <datatables:column title="Street" property="address.street1" />
+        <datatables:column title="Mail" property="mail" />
+     </datatables:table>
+
+As a result, <strong>DataTables4j</strong> will produce and externalize the following Javascript code :
+
+    var oTable_myTableId;
+    $(document).ready(function(){
+        oTable_myTableId = $('#myTableId').dataTable({
+            "sDom" : "lfrtip",
+            "sPaginationType" : "full_numbers",
+            "aoColumns" : [
+                {"bSortable" : true}, 
+                {"bSortable" : true}, 
+                {"bSortable" : true}, 
+                {"bSortable" : true}, 
+                {"bSortable" : true} 
+            ]
+        });
+    });
+
+<hr />
+<h5>Demo</h5>
+<a href="${demoAppUrl}basic/paging" class="btn btn-success" target="_BLANK">See the demo</a>

@@ -1,0 +1,40 @@
+<h3>Plugins</h3>
+
+<h4>FixedHeader</h4>
+
+This plugin allows you to fixed the table header by scrolling.
+
+<h5>Usage</h5>
+You just need to set the <code>fixedheader</code> table attribute to <tt>true</tt> to activate the plugin.
+
+<h5>Example</h5>
+
+    <datatables:table id="myTableId" data="${persons}" fixedHeader="true" offsetTop="40">
+        <datatables:column title="Id" property="id" />
+        <datatables:column title="FirstName" property="firstName" />
+        <datatables:column title="LastName" property="lastName" />
+        <datatables:column title="Street" property="address.street1" />
+        <datatables:column title="Mail" property="mail" />
+    </datatables:table>
+    
+As a result, <strong>DataTables4j</strong> will produce the following HTML code :
+
+    <table id="myTableId">
+        ...
+    </table>
+    <script src="http://your.domain/your.context.path/datatablesController/datatables4j-fixedheader.js"></script>
+    <script src="http://your.domain/your.context.path/datatablesController/datatables4j-XXXXX.js"></script>
+    
+ As you can see, 2 Javascript files are generated.
+ 
+ * <i>datatables4j-XXXX.js</i> where XXXXX is a random set of numeric characters
+  
+     This file contains, as usual, the DataTables initialisation javascript code. A set a random numeric characted is appended to the name in order to avoid conflict if the page contains multiple tables.
+
+ * <i>datatables4j-fixedheader.js</i> 
+
+     This file contains the plugin source. Note that no set of random numeric character has been appended to the file name. It\'s just because plugin source doen\'t change often. Using this name, the file will probably be part of your browser cache, saving time and bandwidth.
+
+<hr />  
+<h5>Demo</h5>
+<a href="${demoAppUrl}plugins/fixedheader" class="btn btn-success" target="_BLANK">See the demo</a>

@@ -1,0 +1,27 @@
+<h3>Advanced initialisation</h3>
+
+<h4>Override default configuration</h4>
+
+By default, <strong>DataTables4j</strong> internally uses a properties file which affect all table in your application. But you may need to override it, just for a specific table.
+
+Well, you can, using the <code>prop</code> tag. Just define the property\'s name and value you want to override and only the current table will be affected.
+
+You can see the properties reference [here](./ref.properties.html "See properties reference").
+
+<hr />
+<h5>Example</h5>
+
+For instance, compression is by default disabled. Thanks to the <code>prop</code> tag, you can enable it locally, just for a given JSP.
+
+    <datatables:table id="myTableId" data="${persons}">
+        <datatables:column title="Id" property="id" />
+        <datatables:column title="FirstName" property="firstName" />
+        <datatables:column title="LastName" property="lastName" />
+        <datatables:column title="Street" property="address.street1" />
+        <datatables:column title="Mail" property="mail" />
+        <datatables:prop name="datatables4j.compressor.enable" value="true"/>
+    </datatables:table>
+
+<hr />
+<h5>Demo</h5>   
+<a href="${demoAppUrl}advanced/override" class="btn btn-success" target="_BLANK">See the demo</a>    

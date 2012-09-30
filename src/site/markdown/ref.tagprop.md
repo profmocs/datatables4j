@@ -34,7 +34,7 @@ Allow to override a property normally defined in the DataTables4j properties fil
   </tr>
   <tr>
     <td>value</td>
-    <td><strong>(required)</strong> Value of the property to override. See (lien vers liste des propriétés)</td>
+    <td><strong>(required)</strong> Value of the property to override</td>
     <td>java.lang.String</td>
     <td></td>
     <td></td>

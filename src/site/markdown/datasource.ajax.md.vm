@@ -1,0 +1,37 @@
+<h3>Data sources</h3>
+
+<h4>AJAX data source</h4>
+
+If your application already has some REST web services, able to return your objects in JSON format, you can populate your table with it.
+
+<strong>DataTables4j</strong> internally uses a [Jersey](http://jersey.java.net/ "Jersey") RESTful Java client that will perform a GET request on the URL you set in the <code>url</code> attribute of the table tag.
+
+The result will then be mapped in JSON thanks to the [Jackson](http://jackson.codehaus.org/ "Jackson") library in order to popupate the table, using the [aaData](http://datatables.net/ref#aaData) DataTables parameter.
+
+<hr />
+<h5>Example</h5>
+If you browse the demo application sources, you\'ll see that the Spring MVC AJAX features are used (since [Spring 3.0](http://blog.springsource.org/2010/01/25/ajax-simplifications-in-spring-3-0/ "Jackson")).
+	
+    @RequestMapping(value="/personsWs", method = RequestMethod.GET)
+	public @ResponseBody List<Person> getPersons(){
+        return personCoordinator.get1000();
+	}
+	
+Then, all I need to do is to set the REST WS url in the <code>url</code> attribute :  
+
+      <datatables:table id="myTableId" url="/personsWs">
+          <datatables:column title="Id" property="id"/>
+          <datatables:column title="FirstName" property="firstName" />
+          <datatables:column title="LastName" property="lastName" />
+          <datatables:column title="Street" property="address.street1" />
+          <datatables:column title="Mail" property="mail" />
+      </datatables:table>
+      
+<hr />
+<h5>Demo</h5>
+<a href="${demoAppUrl}/datasource/ajax" class="btn btn-success" target="_BLANK">See the demo</a>
+
+<hr />
+<h5>Change the client</h5>
+
+to come \...

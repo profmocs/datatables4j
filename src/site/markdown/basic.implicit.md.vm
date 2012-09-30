@@ -1,0 +1,55 @@
+<h3>Basic initialisation</h3>
+
+<h4>Using implicit object</h4>
+
+When you use the <code>row</code> attribute of the table tag, the object corresponding to the given row is made available in the page context, so you can use it inside the column tag body to customize the content.
+
+Generally speaking, you can use it whenever you need to display more information than just the property of a bean.
+
+<h4>Warning!</h4>
+The <code>row</code> attribute can only be used with DOM datasource.
+
+<hr />
+<h5>Example</h5>
+
+The example below shows how to use the <code>row</code> attribute to decorate a <i>mailto</i> link.
+
+    <datatables:table id="myTableId" data="${persons}" row="person">
+        <datatables:column title="Id" property="id" />
+        <datatables:column title="FirstName" property="firstName" />
+        <datatables:column title="LastName" property="lastName" />
+        <datatables:column title="Street" property="address.street1" />
+        <datatables:column title="Mail">
+            <a href="mailto:${person.mail}">${person.mail}</a>
+        </datatables:column>
+     </datatables:table>
+
+As a result, <strong>DataTables4j</strong> will produce the following HTML code :
+
+    <table id="myTableId">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Street</th>
+                <th>Mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Selma</td>
+                <td>Maldonado</td>
+                <td>Ap #351-1812 Eu, Ave</td>
+                <td>
+                    <a href="mailto:venenatis@Duisvolutpat.com">venenatis@Duisvolutpat.com</a>
+                </td>
+            </tr>
+            ...
+        </tbody>
+    </table>
+
+<hr />
+<h5>Demo</h5>
+<a href="${demoAppUrl}basic/autowidth" class="btn btn-success" target="_BLANK">See the demo</a>
