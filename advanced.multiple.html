@@ -149,13 +149,55 @@
           <i class="icon-chevron-right"></i>
         Basic initialisation</a>
                   </li>
-                                                                                                                                                              
+                                                                                                                                                                        
       <li>
     
                           <a href="advanced.home.html" title="Advanced initialisation">
-          <i class="icon-chevron-right"></i>
+          <i class="icon-chevron-down"></i>
         Advanced initialisation</a>
-                  </li>
+                    <ul class="nav nav-list">
+                      
+      <li>
+    
+                          <a href="advanced.rowid.html" title="Row id">
+          <i class="none"></i>
+        Row id</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="advanced.extrafile.html" title="Use extra file">
+          <i class="none"></i>
+        Use extra file</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="advanced.extraconf.html" title="Use extra conf">
+          <i class="none"></i>
+        Use extra conf</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="advanced.override.html" title="Override default configuration">
+          <i class="none"></i>
+        Override default configuration</a>
+            </li>
+                      
+      <li class="active">
+    
+            <a href="#"><i class="none"></i>Multiple tables</a>
+          </li>
+                      
+      <li>
+    
+                          <a href="advanced.ninja.html" title="Ninja tables">
+          <i class="none"></i>
+        Ninja tables</a>
+            </li>
+              </ul>
+        </li>
                               <li class="nav-header">Reference</li>
                                 
       <li>
@@ -214,20 +256,13 @@
           <i class="icon-chevron-right"></i>
         Using compressor</a>
                   </li>
-                                                                              
+                                                                    
       <li>
     
                           <a href="features.aggregator.home.html" title="Using aggregator">
-          <i class="icon-chevron-down"></i>
+          <i class="icon-chevron-right"></i>
         Using aggregator</a>
-                    <ul class="nav nav-list">
-                      
-      <li class="active">
-    
-            <a href="#"><i class="none"></i>Default configuration</a>
-          </li>
-              </ul>
-        </li>
+                  </li>
                               <li class="nav-header">Plugins</li>
                                                                                                                       
       <li>
@@ -293,7 +328,28 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            <p>to come </p>
+            <div class="section"><div class="section"><h3>Advanced initialisation<a name="Advanced_initialisation"></a></h3>
+<div class="section"><h4>Multiple tables<a name="Multiple_tables"></a></h4><p><b>DataTables4j</b> can handle multiple tables on the same page. Just ensure to give a unique <tt>id</tt> to each table.</p>
+<hr />
+<div class="section"><h5>Example<a name="Example"></a></h5>
+<div class="source"><pre class="prettyprint">&lt;datatables:table id=&quot;myTableId&quot; data=&quot;${persons}&quot;&gt;
+    &lt;datatables:column title=&quot;Id&quot; property=&quot;id&quot; /&gt;
+    &lt;datatables:column title=&quot;FirstName&quot; property=&quot;firstName&quot; /&gt;
+    &lt;datatables:column title=&quot;LastName&quot; property=&quot;lastName&quot; /&gt;
+    &lt;datatables:column title=&quot;Street&quot; property=&quot;address.street1&quot; /&gt;
+    &lt;datatables:column title=&quot;Mail&quot; property=&quot;mail&quot; /&gt;
+&lt;/datatables:table&gt;
+
+&lt;datatables:table id=&quot;myOtherTableId&quot; data=&quot;${persons}&quot;&gt;
+    &lt;datatables:column title=&quot;Id&quot; property=&quot;id&quot; /&gt;
+    &lt;datatables:column title=&quot;FirstName&quot; property=&quot;firstName&quot; /&gt;
+    &lt;datatables:column title=&quot;LastName&quot; property=&quot;lastName&quot; /&gt;
+    &lt;datatables:column title=&quot;Street&quot; property=&quot;address.street1&quot; /&gt;
+    &lt;datatables:column title=&quot;Mail&quot; property=&quot;mail&quot; /&gt;
+&lt;/datatables:table&gt;
+</pre></div>
+<hr />
+</div><div class="section"><h5>Demo<a name="Demo"></a></h5><p><a class="btn btn-success" href="http://datatables4j-examples.datatables4j.cloudbees.net/advanced/multiple" target="_BLANK">See the demo</a></p></div></div></div></div>
                   </div>
             </div>
           </div>

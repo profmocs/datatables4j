@@ -135,13 +135,27 @@
         Acknowledgments</a>
             </li>
                               <li class="nav-header">Examples</li>
-                                                                                                    
+                                                                                                              
       <li>
     
                           <a href="datasource.home.html" title="Data sources">
-          <i class="icon-chevron-right"></i>
+          <i class="icon-chevron-down"></i>
         Data sources</a>
-                  </li>
+                    <ul class="nav nav-list">
+                      
+      <li>
+    
+                          <a href="datasource.dom.html" title="DOM">
+          <i class="none"></i>
+        DOM</a>
+            </li>
+                      
+      <li class="active">
+    
+            <a href="#"><i class="none"></i>AJAX</a>
+          </li>
+              </ul>
+        </li>
                                                                                                                                                                                                                                       
       <li>
     
@@ -214,20 +228,13 @@
           <i class="icon-chevron-right"></i>
         Using compressor</a>
                   </li>
-                                                                              
+                                                                    
       <li>
     
                           <a href="features.aggregator.home.html" title="Using aggregator">
-          <i class="icon-chevron-down"></i>
+          <i class="icon-chevron-right"></i>
         Using aggregator</a>
-                    <ul class="nav nav-list">
-                      
-      <li class="active">
-    
-            <a href="#"><i class="none"></i>Default configuration</a>
-          </li>
-              </ul>
-        </li>
+                  </li>
                               <li class="nav-header">Plugins</li>
                                                                                                                       
       <li>
@@ -293,7 +300,27 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            <p>to come </p>
+            <div class="section"><div class="section"><h3>Data sources<a name="Data_sources"></a></h3>
+<div class="section"><h4>AJAX data source<a name="AJAX_data_source"></a></h4><p>If your application already has some REST web services, able to return your objects in JSON format, you can populate your table with it.</p><p><b>DataTables4j</b> internally uses a <a class="externalLink" href="http://jersey.java.net/" title="Jersey">Jersey</a> RESTful Java client that will perform a GET request on the URL you set in the <tt>url</tt> attribute of the table tag.</p><p>The result will then be mapped in JSON thanks to the <a class="externalLink" href="http://jackson.codehaus.org/" title="Jackson">Jackson</a> library in order to popupate the table, using the <a class="externalLink" href="http://datatables.net/ref#aaData">aaData</a> DataTables parameter.</p>
+<hr />
+<div class="section"><h5>Example<a name="Example"></a></h5><p>If you browse the demo application sources, you'll see that the Spring MVC AJAX features are used (since <a class="externalLink" href="http://blog.springsource.org/2010/01/25/ajax-simplifications-in-spring-3-0/" title="Jackson">Spring 3.0</a>).</p>
+<div class="source"><pre class="prettyprint">@RequestMapping(value=&quot;/personsWs&quot;, method = RequestMethod.GET)
+public @ResponseBody List&lt;Person&gt; getPersons(){
+    return personCoordinator.get1000();
+}
+</pre></div><p>Then, all I need to do is to set the REST WS url in the <tt>url</tt> attribute : </p>
+<div class="source"><pre class="prettyprint">  &lt;datatables:table id=&quot;myTableId&quot; url=&quot;/personsWs&quot;&gt;
+      &lt;datatables:column title=&quot;Id&quot; property=&quot;id&quot;/&gt;
+      &lt;datatables:column title=&quot;FirstName&quot; property=&quot;firstName&quot; /&gt;
+      &lt;datatables:column title=&quot;LastName&quot; property=&quot;lastName&quot; /&gt;
+      &lt;datatables:column title=&quot;Street&quot; property=&quot;address.street1&quot; /&gt;
+      &lt;datatables:column title=&quot;Mail&quot; property=&quot;mail&quot; /&gt;
+  &lt;/datatables:table&gt;
+</pre></div>
+<hr />
+</div><div class="section"><h5>Demo<a name="Demo"></a></h5><p><a class="btn btn-success" href="http://datatables4j-examples.datatables4j.cloudbees.net//datasource/ajax" target="_BLANK">See the demo</a></p>
+<hr />
+</div><div class="section"><h5>Change the client<a name="Change_the_client"></a></h5><p>to come ...</p></div></div></div></div>
                   </div>
             </div>
           </div>

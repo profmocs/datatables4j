@@ -142,13 +142,83 @@
           <i class="icon-chevron-right"></i>
         Data sources</a>
                   </li>
-                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                
       <li>
     
                           <a href="basic.home.html" title="Basic initialisation">
-          <i class="icon-chevron-right"></i>
+          <i class="icon-chevron-down"></i>
         Basic initialisation</a>
-                  </li>
+                    <ul class="nav nav-list">
+                      
+      <li>
+    
+                          <a href="basic.default.html" title="Default configuration">
+          <i class="none"></i>
+        Default configuration</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="basic.info.html" title="Table informations">
+          <i class="none"></i>
+        Table informations</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="basic.sorting.html" title="Table sorting">
+          <i class="none"></i>
+        Table sorting</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="basic.filtering.html" title="Table filtering">
+          <i class="none"></i>
+        Table filtering</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="basic.paging.html" title="Table paging">
+          <i class="none"></i>
+        Table paging</a>
+            </li>
+                      
+      <li class="active">
+    
+            <a href="#"><i class="none"></i>Table length changing</a>
+          </li>
+                      
+      <li>
+    
+                          <a href="basic.autowidth.html" title="Table width">
+          <i class="none"></i>
+        Table width</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="basic.implicit.html" title="Using implicit object">
+          <i class="none"></i>
+        Using implicit object</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="basic.properties.html" title="Using properties file">
+          <i class="none"></i>
+        Using properties file</a>
+            </li>
+                      
+      <li>
+    
+                          <a href="basic.cdn.html" title="Using CDN">
+          <i class="none"></i>
+        Using CDN</a>
+            </li>
+              </ul>
+        </li>
                                                                                                                                                               
       <li>
     
@@ -214,20 +284,13 @@
           <i class="icon-chevron-right"></i>
         Using compressor</a>
                   </li>
-                                                                              
+                                                                    
       <li>
     
                           <a href="features.aggregator.home.html" title="Using aggregator">
-          <i class="icon-chevron-down"></i>
+          <i class="icon-chevron-right"></i>
         Using aggregator</a>
-                    <ul class="nav nav-list">
-                      
-      <li class="active">
-    
-            <a href="#"><i class="none"></i>Default configuration</a>
-          </li>
-              </ul>
-        </li>
+                  </li>
                               <li class="nav-header">Plugins</li>
                                                                                                                       
       <li>
@@ -293,7 +356,35 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            <p>to come </p>
+            <div class="section"><div class="section"><h3>Basic initialisation<a name="Basic_initialisation"></a></h3>
+<div class="section"><h4>Table length changing<a name="Table_length_changing"></a></h4><p>You can enable or disable the capability to change the number of result per page using the <tt>lengthChange</tt> table attribute.</p>
+<hr />
+<div class="section"><h5>Example<a name="Example"></a></h5>
+<div class="source"><pre class="prettyprint">&lt;datatables:table id=&quot;myTableId&quot; data=&quot;${persons}&quot; lengthChange=&quot;false&quot;&gt;
+    &lt;datatables:column title=&quot;Id&quot; property=&quot;id&quot; /&gt;
+    &lt;datatables:column title=&quot;FirstName&quot; property=&quot;firstName&quot; /&gt;
+    &lt;datatables:column title=&quot;LastName&quot; property=&quot;lastName&quot; /&gt;
+    &lt;datatables:column title=&quot;Street&quot; property=&quot;address.street1&quot; /&gt;
+    &lt;datatables:column title=&quot;Mail&quot; property=&quot;mail&quot; /&gt;
+ &lt;/datatables:table&gt;
+</pre></div><p>As a result, <b>DataTables4j</b> will produce and externalize the following Javascript code :</p>
+<div class="source"><pre class="prettyprint">var oTable_myTableId;
+$(document).ready(function(){
+    oTable_myTableId = $('#myTableId').dataTable({
+        &quot;sDom&quot; : &quot;lfrtip&quot;,
+        &quot;bLengthChange&quot; : false,
+        &quot;aoColumns&quot; : [
+            {&quot;bSortable&quot; : true}, 
+            {&quot;bSortable&quot; : true}, 
+            {&quot;bSortable&quot; : true}, 
+            {&quot;bSortable&quot; : true}, 
+            {&quot;bSortable&quot; : true} 
+        ]
+    });
+});
+</pre></div>
+<hr />
+</div><div class="section"><h5>Demo<a name="Demo"></a></h5><p><a class="btn btn-success" href="http://datatables4j-examples.datatables4j.cloudbees.net/basic/lengthchange" target="_BLANK">See the demo</a></p></div></div></div></div>
                   </div>
             </div>
           </div>
