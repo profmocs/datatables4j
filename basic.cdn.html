@@ -356,7 +356,27 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            <p>CDN allows you to avoid hosting yourself DataTables files on your server. The Microsoft CDN sen charge.</p><p>To use CDN, just set the cdn table attribute to true.</p><p>All needed file (<i>.js, </i>.css, *.png) will so be downloaded from <a class="externalLink" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/jquery.dataTables.js">http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/jquery.dataTables.js</a>.</p>
+            <div class="section"><div class="section"><h3>Basic initialisation<a name="Basic_initialisation"></a></h3>
+<div class="section"><h4>Using CDN<a name="Using_CDN"></a></h4><p>To use CDN, just set the <tt>cdn</tt> table attribute to <tt>true</tt>.</p>
+<hr />
+<div class="section"><h5>Example<a name="Example"></a></h5>
+<div class="source"><pre class="prettyprint">&lt;datatables:table id=&quot;myTableId&quot; data=&quot;${persons}&quot; cdn=&quot;true&quot;&gt;
+    &lt;datatables:column title=&quot;Id&quot; property=&quot;id&quot; /&gt;
+    &lt;datatables:column title=&quot;FirstName&quot; property=&quot;firstName&quot; /&gt;
+    &lt;datatables:column title=&quot;LastName&quot; property=&quot;lastName&quot; /&gt;
+    &lt;datatables:column title=&quot;Street&quot; property=&quot;address.street1&quot; /&gt;
+    &lt;datatables:column title=&quot;Mail&quot; property=&quot;mail&quot; /&gt;
+ &lt;/datatables:table&gt;
+</pre></div><p>As a result, <b>DataTables4j</b> will produce the following HTML code :</p>
+<div class="source"><pre class="prettyprint">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/css/jquery.dataTables.css&quot;&gt;
+&lt;table id=&quot;myTableId&gt;
+    ...
+&lt;/table&gt;
+&lt;script src=&quot;http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.3/jquery.dataTables.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://your.domain/your.context.path/datatablesController/datatables4j-XXXXX.js&quot;&gt;&lt;/script&gt;
+</pre></div>
+<hr />
+</div><div class="section"><h5>Demo<a name="Demo"></a></h5><p><a class="btn btn-success" href="http://datatables4j-examples.datatables4j.cloudbees.net/basic/cdn" target="_BLANK">See the demo</a></p></div></div></div></div>
                   </div>
             </div>
           </div>
